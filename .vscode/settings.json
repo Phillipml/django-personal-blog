@@ -1,5 +1,7 @@
 {
     "cSpell.words": [
+        "propopulated",
         "urlspatterns"
-    ]
+    ],
+    "editor.formatOnSave": true
 }

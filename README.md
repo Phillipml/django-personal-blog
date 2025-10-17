@@ -1,232 +1,158 @@
 # Django Personal Blog
 
-Um blog pessoal desenvolvido com Django, framework web Python moderno e robusto.
+Um blog pessoal completo desenvolvido com Django, demonstrando as melhores práticas do framework Python para desenvolvimento web.
 
-## 🚀 Pré-requisitos
+## 📸 Screenshot da Aplicação
 
-Antes de começar, certifique-se de ter instalado:
+![Screenshot da Aplicação](./public/screenshot.png)
+*Interface do blog Django com listagem de posts e design responsivo*
 
-- **Python 3.8+** - [Download Python](https://www.python.org/downloads/)
-- **Git** - [Download Git](https://git-scm.com/downloads)
-- **Editor de código** (VS Code, PyCharm, Sublime Text, etc.)
+## ✨ Funcionalidades
 
-## 📋 Instalação e Configuração
+- **Sistema de Posts**: Criação, edição e publicação de artigos
+- **Painel Administrativo**: Interface completa para gerenciar conteúdo
+- **Design Responsivo**: Interface adaptável com Bootstrap
+- **Sistema de Usuários**: Autenticação e autorização integradas
+- **URLs Amigáveis**: Sistema de slugs para URLs limpas
+- **Testes Automatizados**: Cobertura de testes com pytest
+- **Templates Dinâmicos**: Sistema de templates Django com herança
 
-### 1. **Clonar o Repositório**
+## 🛠️ Tecnologias Utilizadas
 
+- **Django 5.2.5** - Framework web Python
+- **Python 3.8+** - Linguagem de programação
+- **SQLite3** - Banco de dados (desenvolvimento)
+- **Bootstrap 4** - Framework CSS
+- **pytest** - Framework de testes
+- **Factory Boy** - Geração de dados para testes
+- **Faker** - Dados fictícios para desenvolvimento
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+
+- Python 3.8 ou superior
+- pip (gerenciador de pacotes Python)
+
+### Instalação
+
+1. **Clone o repositório:**
 ```bash
 git clone <url-do-repositorio>
 cd django-personal-blog
 ```
 
-### 2. **Navegar para o Diretório do Projeto**
-
+2. **Crie e ative o ambiente virtual:**
 ```bash
-# IMPORTANTE: Fique na raiz do projeto (onde está o README.md)
-# NÃO entre na pasta personal_blog ainda
-```
-
-### 3. **Criar Ambiente Virtual**
-
-É altamente recomendado usar um ambiente virtual para isolar as dependências:
-
-```bash
-# Criar ambiente virtual
 python -m venv venv
-
-# Ativar o ambiente virtual
+# Windows
 .\venv\Scripts\activate
-# OU para Linux/Mac
+# Linux/Mac
 source venv/bin/activate
 ```
 
-**Dica:** Você saberá que o ambiente virtual está ativo quando ver `(venv)` no início da linha do terminal.
-
-### 4. **Instalar Dependências**
-
-Com o ambiente virtual ativado, instale o Django:
-
+3. **Instale as dependências:**
 ```bash
-pip install django
+pip install -r requirements.txt
 ```
 
-### 5. **Navegar para o Diretório Django**
-
+4. **Configure o banco de dados:**
 ```bash
 cd personal_blog
-```
-
-### 6. **Verificar Instalação**
-
-Confirme que o Django foi instalado corretamente:
-
-```bash
-python manage.py --version
-```
-
-## 🗄️ Configuração do Banco de Dados
-
-### 7. **Executar Migrações**
-
-Configure o banco de dados inicial:
-
-```bash
-# Criar arquivos de migração
-python manage.py makemigrations
-
-# Aplicar migrações ao banco
 python manage.py migrate
 ```
 
-### 8. **Criar Superusuário (Opcional)**
-
-Para acessar o painel administrativo do Django:
-
+5. **Crie um superusuário (opcional):**
 ```bash
 python manage.py createsuperuser
 ```
 
-Siga as instruções para criar um usuário e senha.
-
-## 🚀 Executando o Projeto
-
-### 9. **Iniciar Servidor de Desenvolvimento**
-
+6. **Execute o servidor:**
 ```bash
 python manage.py runserver
 ```
 
-### 10. **Acessar o Projeto**
-
-- **Site principal:** http://127.0.0.1:8000/
-- **Painel administrativo:** http://127.0.0.1:8000/admin/
+7. **Acesse a aplicação:**
+- **Blog:** http://127.0.0.1:8000/
+- **Admin:** http://127.0.0.1:8000/admin/
 
 ## 📁 Estrutura do Projeto
 
 ```
-django-personal-blog/           ← Raiz do projeto
-├── venv/                      ← Ambiente virtual (criar aqui)
-├── personal_blog/             ← Projeto Django
-│   ├── manage.py
-│   ├── personal_blog/         # Configurações principais
-│   │   ├── __init__.py
-│   │   ├── settings.py        # Configurações do Django
-│   │   ├── urls.py           # URLs principais
-│   │   ├── wsgi.py           # Configuração WSGI
-│   │   └── asgi.py           # Configuração ASGI
-│   └── blog/                  # Aplicação principal do blog
-│       ├── __init__.py
-│       ├── admin.py          # Configuração do painel admin
-│       ├── apps.py           # Configuração da aplicação
-│       ├── models/           # Modelos de dados
-│       ├── views.py          # Lógica de visualização
-│       ├── tests.py          # Testes automatizados
-│       └── migrations/       # Arquivos de migração do banco
-├── manage.py                 # Script de gerenciamento do Django
-├── README.md                 # Este arquivo
-└── .gitignore               # Arquivos ignorados pelo Git
+django-personal-blog/
+├── personal_blog/              # Projeto Django principal
+│   ├── blog/                  # Aplicação do blog
+│   │   ├── models/            # Modelos de dados
+│   │   ├── views/             # Views e lógica de negócio
+│   │   ├── admin.py           # Configuração do painel admin
+│   │   └── migrations/        # Migrações do banco
+│   ├── templates/             # Templates HTML
+│   ├── personal_blog/         # Configurações do projeto
+│   └── manage.py              # Script de gerenciamento
+├── tests/                     # Testes automatizados
+├── public/                    # Screenshots e assets
+├── requirements.txt           # Dependências do projeto
+└── pytest.ini               # Configuração do pytest
 ```
 
-## 🛠️ Comandos Úteis
+## 🧪 Testes
 
-### Desenvolvimento
+Execute os testes com pytest:
 
 ```bash
+# Executar todos os testes
+pytest
+
+# Executar testes com cobertura
+pytest --cov=blog
+
+# Executar testes específicos
+pytest tests/models/
+```
+
+## 🎯 Características Técnicas
+
+- **Arquitetura MVC**: Separação clara entre modelos, views e templates
+- **ORM Django**: Mapeamento objeto-relacional para interação com banco
+- **Sistema de Migrações**: Controle de versão do esquema do banco
+- **Class-Based Views**: Views baseadas em classes para reutilização
+- **Template Inheritance**: Sistema de herança de templates
+- **Admin Interface**: Painel administrativo automático e customizável
+- **Testes Unitários**: Cobertura completa com pytest e Factory Boy
+
+## 📝 Uso
+
+1. **Criar Posts**: Acesse o painel admin para criar novos posts
+2. **Gerenciar Conteúdo**: Use a interface administrativa para editar posts
+3. **Visualizar Blog**: Navegue pela interface pública para ler os posts
+4. **Personalizar**: Modifique templates e estilos conforme necessário
+
+## 🔧 Comandos Úteis
+
+```bash
+# Criar nova migração
+python manage.py makemigrations
+
+# Aplicar migrações
+python manage.py migrate
+
 # Executar testes
 python manage.py test
 
-# Criar nova migração após alterar modelos
-python manage.py makemigrations
-
-# Aplicar migrações pendentes
-python manage.py migrate
-
-# Acessar shell interativo do Django
+# Shell interativo
 python manage.py shell
 
-# Coletar arquivos estáticos (produção)
+# Coletar arquivos estáticos
 python manage.py collectstatic
 ```
-
-### Gerenciamento de Usuários
-
-```bash
-# Criar novo usuário
-python manage.py createsuperuser
-
-# Alterar senha de usuário
-python manage.py changepassword <username>
-```
-
-## 🔧 Configurações Importantes
-
-### Arquivo `settings.py`
-
-- **DEBUG = True** - Modo de desenvolvimento (desative em produção)
-- **SECRET_KEY** - Chave secreta para segurança (não compartilhe)
-- **DATABASES** - Configurado para SQLite por padrão
-- **INSTALLED_APPS** - Inclui o app `blog` e apps padrão do Django
-
-### Banco de Dados
-
-Por padrão, o projeto usa **SQLite3**, que é perfeito para desenvolvimento. Para produção, considere usar PostgreSQL ou MySQL.
-
-## 🚨 Solução de Problemas Comuns
-
-### Erro: "No module named 'django'"
-
-- **Solução:** Ative o ambiente virtual: `.\venv\Scripts\Activate.ps1`
-
-### Erro: "Port already in use"
-
-- **Solução:** Use uma porta diferente: `python manage.py runserver 8001`
-
-### Erro: "Database is locked"
-
-- **Solução:** Feche outros processos que possam estar usando o banco
-
-## 📚 Próximos Passos
-
-Após iniciar o projeto com sucesso:
-
-1. **Personalizar o Blog:**
-
-   - Editar `blog/views.py` para criar suas próprias views
-   - Modificar `personal_blog/urls.py` para configurar rotas
-   - Criar templates HTML em `blog/templates/`
-
-2. **Adicionar Funcionalidades:**
-
-   - Sistema de comentários
-   - Categorias de posts
-   - Sistema de tags
-   - Upload de imagens
-
-3. **Melhorar o Design:**
-   - Adicionar CSS personalizado
-   - Implementar design responsivo
-   - Integrar com frameworks CSS (Bootstrap, Tailwind)
-
-## 🤝 Contribuindo
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
 
 ## 📄 Licença
 
 Este projeto está sob a licença especificada no arquivo `LICENSE`.
 
-## 🆘 Suporte
-
-Se encontrar problemas ou tiver dúvidas:
-
-1. Verifique se seguiu todos os passos corretamente
-2. Consulte a [documentação oficial do Django](https://docs.djangoproject.com/)
-3. Abra uma issue no repositório
-
 ---
 
-**Happy Coding! 🎉**
+**Desenvolvido por:** Phillip M. Lopes  
+**Email:** phillipmlopes@gmail.com  
+**LinkedIn:** [phillipmlopes](https://www.linkedin.com/in/phillipmlopes/)  
+**GitHub:** [Phillipml](https://github.com/Phillipml)

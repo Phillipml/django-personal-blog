@@ -4,8 +4,8 @@ Um blog pessoal completo desenvolvido com Django, demonstrando as melhores prát
 
 ## 📸 Screenshot da Aplicação
 
-![Screenshot da Aplicação](./public/screenshot.png)
-*Interface do blog Django com listagem de posts e design responsivo*
+![Screenshot da Aplicação](https://raw.githubusercontent.com/Phillipml/django-personal-blog/main/public/screenshot.png)
+_Interface do blog Django com listagem de posts e design responsivo_
 
 ## ✨ Funcionalidades
 
@@ -37,12 +37,14 @@ Um blog pessoal completo desenvolvido com Django, demonstrando as melhores prát
 ### Instalação
 
 1. **Clone o repositório:**
+
 ```bash
 git clone <url-do-repositorio>
 cd django-personal-blog
 ```
 
 2. **Crie e ative o ambiente virtual:**
+
 ```bash
 python -m venv venv
 # Windows
@@ -52,27 +54,32 @@ source venv/bin/activate
 ```
 
 3. **Instale as dependências:**
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. **Configure o banco de dados:**
+
 ```bash
 cd personal_blog
 python manage.py migrate
 ```
 
 5. **Crie um superusuário (opcional):**
+
 ```bash
 python manage.py createsuperuser
 ```
 
 6. **Execute o servidor:**
+
 ```bash
 python manage.py runserver
 ```
 
 7. **Acesse a aplicação:**
+
 - **Blog:** http://127.0.0.1:8000/
 - **Admin:** http://127.0.0.1:8000/admin/
 

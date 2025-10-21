@@ -2,32 +2,46 @@
 
 Um blog pessoal completo desenvolvido com Django, demonstrando as melhores práticas do framework Python para desenvolvimento web.
 
-## 📸 Screenshot da Aplicação
+# 📸 Screenshot da Aplicação
 
 ![Screenshot da Aplicação](https://raw.githubusercontent.com/Phillipml/django-personal-blog/main/public/screenshot.png)
 _Interface do blog Django com listagem de posts e design responsivo_
 
-## ✨ Funcionalidades
+# ✨ Funcionalidades
 
-- **Sistema de Posts**: Criação, edição e publicação de artigos
-- **Painel Administrativo**: Interface completa para gerenciar conteúdo
-- **Design Responsivo**: Interface adaptável com Bootstrap
-- **Sistema de Usuários**: Autenticação e autorização integradas
-- **URLs Amigáveis**: Sistema de slugs para URLs limpas
-- **Testes Automatizados**: Cobertura de testes com pytest
-- **Templates Dinâmicos**: Sistema de templates Django com herança
+## Sistema de Posts:
+Criação, edição e publicação de artigos
+## Painel Administrativo:
+Interface completa para gerenciar conteúdo
+## Design Responsivo:
+Interface adaptável com Bootstrap
+## Sistema de Usuários:
+Autenticação e autorização integradas
+## URLs Amigáveis:
+Sistema de slugs para URLs limpas
+## Testes Automatizados:
+Cobertura de testes com pytest
+## Templates Dinâmicos:
+Sistema de templates Django com herança
 
-## 🛠️ Tecnologias Utilizadas
+# 🛠️ Tecnologias Utilizadas
 
-- **Django 5.2.5** - Framework web Python
-- **Python 3.8+** - Linguagem de programação
-- **SQLite3** - Banco de dados (desenvolvimento)
-- **Bootstrap 4** - Framework CSS
-- **pytest** - Framework de testes
-- **Factory Boy** - Geração de dados para testes
-- **Faker** - Dados fictícios para desenvolvimento
+## Django 5.2.5:
+Framework web Python
+## Python 3.8+:
+Linguagem de programação
+## SQLite3:
+Banco de dados (desenvolvimento)
+## Bootstrap 4:
+Framework CSS
+## pytest:
+Framework de testes
+## Factory Boy:
+Geração de dados para testes
+## Faker:
+Dados fictícios para desenvolvimento
 
-## 🚀 Como Executar
+# 🚀 Como Executar
 
 ### Pré-requisitos
 
@@ -83,7 +97,7 @@ python manage.py runserver
 - **Blog:** http://127.0.0.1:8000/
 - **Admin:** http://127.0.0.1:8000/admin/
 
-## 📁 Estrutura do Projeto
+# 📁 Estrutura do Projeto
 
 ```
 django-personal-blog/
@@ -102,7 +116,7 @@ django-personal-blog/
 └── pytest.ini               # Configuração do pytest
 ```
 
-## 🧪 Testes
+# 🧪 Testes
 
 Execute os testes com pytest:
 
@@ -117,7 +131,7 @@ pytest --cov=blog
 pytest tests/models/
 ```
 
-## 🎯 Características Técnicas
+# 🎯 Características Técnicas
 
 - **Arquitetura MVC**: Separação clara entre modelos, views e templates
 - **ORM Django**: Mapeamento objeto-relacional para interação com banco
@@ -127,14 +141,14 @@ pytest tests/models/
 - **Admin Interface**: Painel administrativo automático e customizável
 - **Testes Unitários**: Cobertura completa com pytest e Factory Boy
 
-## 📝 Uso
+# 📝 Uso
 
 1. **Criar Posts**: Acesse o painel admin para criar novos posts
 2. **Gerenciar Conteúdo**: Use a interface administrativa para editar posts
 3. **Visualizar Blog**: Navegue pela interface pública para ler os posts
 4. **Personalizar**: Modifique templates e estilos conforme necessário
 
-## 🔧 Comandos Úteis
+# 🔧 Comandos Úteis
 
 ```bash
 # Criar nova migração
@@ -153,13 +167,18 @@ python manage.py shell
 python manage.py collectstatic
 ```
 
-## 📄 Licença
+# 📄 Licença
 
 Este projeto está sob a licença especificada no arquivo `LICENSE`.
 
 ---
 
-**Desenvolvido por:** Phillip M. Lopes  
-**Email:** phillipmlopes@gmail.com  
-**LinkedIn:** [phillipmlopes](https://www.linkedin.com/in/phillipmlopes/)  
-**GitHub:** [Phillipml](https://github.com/Phillipml)
+**Desenvolvido por:**
+Phillip Menezes
+
+**Email:**
+contato.phillip.menezes@gmail.com  
+**LinkedIn:**
+[Phillip Menezes](https://www.linkedin.com/in/phillip-menezes-063a39227/)  
+**GitHub:**
+[Phillipml](https://github.com/Phillipml/)
